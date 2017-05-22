@@ -1,0 +1,11 @@
+body {
+  font-family: 'Baloo Bhaina', cursive;
+  background: #EEEBD3;
+  color: #437C90;
+  font-size: 1.85em;
+}
+
+.list-group-item {
+  background: #437C90;
+  color: #EEEBD3;
+}

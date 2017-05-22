@@ -1,11 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4 page-header">
-      <h1>Burgers and Stuff</h1>
+      <img src="assets/img/burger.jpg" class="img-responsive">
+      <h1 class="text-center">Burgers and Stuff</h1>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4 col-md-offset-2">
+    <div class="col-md-6">
       <ul class="list-group">
         {{#each burgers}} {{#unless devoured}}
         <li class="list-group-item">
@@ -13,10 +14,10 @@
             <div class="col-md-7">
               {{this.burger_name}}
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 text-right">
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
-                <button type="submit">Devour Burger</button>
+                <button type="submit" class="btn btn-danger">Devour Burger</button>
               </form>
             </div>
           </div>
@@ -25,7 +26,7 @@
       </ul>
     </div>
     <ul class="list-group">
-      <div class="col-md-4">
+      <div class="col-md-6">
         {{#each burgers}} {{#if devoured}}
         <li class="list-group-item">
           {{this.burger_name}}
@@ -35,15 +36,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-4 col-md-offset-4">
+      <hr>
       <form class="create-update-form" action="/" method="POST">
         <div class="form-group">
-          <label for="burger-name">Burger Name: </label>
-          <input type="text" id="burger-name" name="name">
+          <label for="burger-name">New Burger Name</label>
+          <input type="text" class="form-control" id="burger-name" name="name">
         </div>
 
-        <button class="form-control" type="submit">Add Burger</button>
+        <button class="form-control btn btn-primary" type="submit">Add Burger</button>
       </form>
+      <br>
     </div>
   </div>
 </div>
