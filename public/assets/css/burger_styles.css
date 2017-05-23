@@ -2,11 +2,11 @@ body {
   font-family: 'Baloo Bhaina', cursive;
   background: #EEEBD3;
   color: #437C90;
-  font-size: 1.85em;
+  font-size: 2em;
 }
 
 hr {
-  border: 1px solid #437C90;
+  border: 1px solid #255957;
 }
 
 #burger-img {
