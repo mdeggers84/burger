@@ -5,7 +5,7 @@ var connection;
 console.log(process.env.JAWSDB_URL);
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-  console.log(process.argv.JAWSDB_URL);
+  console.log(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
     host: 'localhost',
