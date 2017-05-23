@@ -9,8 +9,8 @@ hr {
   border: 1px solid #437C90;
 }
 
-#sloth-img {
-  display: none;
+#burger-img {
+  visibility: hidden;
 }
 
 .list-group-item {
