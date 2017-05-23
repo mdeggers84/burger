@@ -16,9 +16,13 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-  burger.insertOne(req.body.name, function () {
+  if (req.body.name.trim() !== '') {
+    burger.insertOne(req.body.name, function () {
+      res.redirect('/');
+    });
+  } else {
     res.redirect('/');
-  });
+  }
 });
 
 router.put('/:id', function (req, res) {
