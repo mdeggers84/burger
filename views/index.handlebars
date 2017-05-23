@@ -10,6 +10,7 @@
     <div class="col-md-6">
       <ul class="list-group">
         <h2 class="text-center">To Eat</h2>
+        {{!--#each loops through burgers data, adding all not devoured to list--}}
         <hr> {{#each burgers}} {{#unless devoured}}
         <li class="list-group-item">
           <div class="row">
@@ -30,6 +31,7 @@
     <div class="col-md-6">
       <ul class="list-group">
         <h2 class="text-center">Eaten</h2>
+        {{!--adds all devoured burgers to list--}}
         <hr> {{#each burgers}} {{#if devoured}}
         <li class="list-group-item">
           {{this.id}}. {{this.burger_name}}

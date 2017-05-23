@@ -5,11 +5,15 @@ var burger = require('../models/burgers.js');
 
 require('../models/burgers');
 
+// sets up routes for get, post, put, and delete
+
+// all reoutes redirected to this for page load after db actions completed
 router.get('/', function (req, res) {
   burger.selectAll(function (data) {
     var hbsObject = {
       burgers: data
     };
+    // logs the db object and then sends info the index.handlebars for page view
     console.log(hbsObject);
     res.render('index', hbsObject);
   });
@@ -17,8 +21,10 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   var name = req.body.name.trim();
-
+  // prevents empty values from posting to db
   if (name !== '') {
+    // sending callback function allows code to be run in this file
+    // after query is finsihed in orm.js
     burger.insertOne(name, function () {
       res.redirect('/');
     });

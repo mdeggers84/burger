@@ -1,3 +1,4 @@
+-- allows easy local db setup
 USE burgers_db;
 
 CREATE TABLE burgers (

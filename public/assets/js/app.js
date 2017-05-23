@@ -1,10 +1,12 @@
 $(document).ready(function () {
   var count = sessionStorage.getItem('count');
 
+  // sets focus to textbox on page load
   function setFocus() {
     $('#burger-name').focus();
   }
 
+  // loads header img based on session storage results
   function loadImage() {
     if (count === '3') {
       $('#burger-img').attr('src', $('#burger-img').attr('sloth')).css('visibility', 'visible');
@@ -18,10 +20,12 @@ $(document).ready(function () {
     });
   }
 
+  // clears session storage when db is reset
   $('#clear-btn').on('click', function () {
     sessionStorage.setItem('count', 0);
   });
 
+  // adds to session storage count on click
   $(document).on('click', '.devour-btn', function () {
     if (count !== null) {
       count++;

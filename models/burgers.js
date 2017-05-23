@@ -1,3 +1,4 @@
+// calls the orm object with burger db specific information
 var orm = require('../config/orm.js');
 
 var burger = {
