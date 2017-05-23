@@ -9,6 +9,10 @@ hr {
   border: 1px solid #437C90;
 }
 
+#sloth-img {
+  display: none;
+}
+
 .list-group-item {
   background: #437C90;
   color: #EEEBD3;
