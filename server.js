@@ -3,14 +3,15 @@ var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
-var path = require('path');
+// var path = require('path');
 
 var app = express();
 var port = 3000;
 
 var routes = require('./controllers/burgers_controllers.js');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(process.cwd() + '/public'));
+// app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
