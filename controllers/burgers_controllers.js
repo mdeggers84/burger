@@ -16,8 +16,10 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-  if (req.body.name.trim() !== '') {
-    burger.insertOne(req.body.name, function () {
+  var name = req.body.name.trim();
+
+  if (name !== '') {
+    burger.insertOne(name, function () {
       res.redirect('/');
     });
   } else {
