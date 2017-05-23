@@ -10,19 +10,31 @@ var orm = {
   },
   insertOne: function (tbl, col, val, cb) {
     var queryStr = 'INSERT INTO ?? (??) VALUES (?);';
-    var query = connection.query(queryStr, [tbl, col, val.toString()], function (err, result) {
+    connection.query(queryStr, [tbl, col, val.toString()], function (err, result) {
       if (err) throw err;
       cb(result);
     });
-    console.log(query.sql);
   },
   updateOne: function (tbl, col, val, cond, cb) {
     var queryStr = 'UPDATE ?? SET ?? = ? WHERE id = ?';
-    var query = connection.query(queryStr, [tbl, col, val, cond], function (err, result) {
+    connection.query(queryStr, [tbl, col, val, cond], function (err, result) {
       if (err) throw err;
       cb(result);
     });
-    console.log(query.sql);
+  },
+  clearDB: function (cb) {
+    var queryStr = 'DELETE FROM burgers WHERE id > 0';
+    connection.query(queryStr, function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
+  },
+  setID: function (cb) {
+    var queryStr = 'ALTER TABLE burgers AUTO_INCREMENT = 1';
+    connection.query(queryStr, function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   }
 };
 

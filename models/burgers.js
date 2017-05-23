@@ -15,6 +15,16 @@ var burger = {
     orm.updateOne('burgers', 'devoured', true, id, function (res) {
       cb(res);
     });
+  },
+  clearDB: function (cb) {
+    orm.clearDB(function (res) {
+      cb(res);
+    });
+  },
+  setID: function (cb) {
+    orm.setID(function (res) {
+      cb(res);
+    });
   }
 };
 

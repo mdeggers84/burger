@@ -27,4 +27,12 @@ router.put('/:id', function (req, res) {
   });
 });
 
+router.delete('/', function (req, res) {
+  burger.clearDB(function () {
+    burger.setID(function () {
+      res.redirect('/');
+    });
+  });
+});
+
 module.exports = router;
