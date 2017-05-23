@@ -6,7 +6,7 @@ var methodOverride = require('method-override');
 var path = require('path');
 
 var app = express();
-var port = 3306;
+var port = process.env.PORT || 3000;
 
 var routes = require('./controllers/burgers_controllers.js');
 
