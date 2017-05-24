@@ -24,7 +24,9 @@
             <div class="col-xs-6 text-right">
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
-                <button type="submit" class="btn btn-danger devour-btn">Devour Burger</button>
+                <button type="submit" class="btn btn-danger devour-btn">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;&nbsp;Devour Burger
+                </button>
               </form>
             </div>
           </div>
@@ -56,10 +58,10 @@
           <label for="burger-name">New Burger Name</label>
           <input type="text" class="form-control" id="burger-name" name="name">
         </div>
-        <button id="add-btn" class="form-control btn btn-primary" type="submit">Add Burger</button>
+        <button id="add-btn" class="form-control btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>&nbsp;&nbsp;Add Burger</button>
       </form>
       <form class="create-update-form" action="/?_method=DELETE" method="POST">
-        <button id="clear-btn" class="form-control btn btn-danger" type="submit">Clear the Table</button>
+        <button id="clear-btn" class="form-control btn btn-danger" type="submit"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;Clear the Table</button>
       </form>
       <br>
     </div>
