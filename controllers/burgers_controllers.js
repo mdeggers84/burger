@@ -6,8 +6,9 @@ var burger = require('../models/burgers.js');
 require('../models/burgers');
 
 // sets up routes for get, post, put, and delete
+// passes to burgers.js
 
-// all reoutes redirected to this for page load after db actions completed
+// all reroutes redirected to this for page load after db actions completed
 router.get('/', function (req, res) {
   burger.selectAll(function (data) {
     var hbsObject = {

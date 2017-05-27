@@ -1,3 +1,4 @@
+// setup static js for addition features / interaction with index page
 $(document).ready(function () {
   var count = sessionStorage.getItem('count');
 
