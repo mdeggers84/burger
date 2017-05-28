@@ -3,8 +3,6 @@ var router = express.Router();
 
 var burger = require('../models/burgers.js');
 
-require('../models/burgers');
-
 // sets up routes for get, post, put, and delete
 // passes to burgers.js
 
